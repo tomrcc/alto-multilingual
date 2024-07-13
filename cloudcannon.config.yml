@@ -13,7 +13,25 @@ collections_config:
     icon: feed
     schemas:
       default:
-        path: src/schemas/page.md
+        path: '.cloudcannon/schemas/page.md'
+    add_options:
+      - name: Add Site Page
+        editor: content
+        schema: default
+    _enabled_editors:
+      - content
+      - visual
+    filter: 
+      base: strict
+  es_pages:
+    output: true
+    parse_branch_index: true
+    disable_add_folder: true
+    path: es_pages
+    icon: feed
+    schemas:
+      default:
+        path: '.cloudcannon/schemas/es_page.md'
     add_options:
       - name: Add Site Page
         editor: content
@@ -71,7 +89,34 @@ collections_config:
     disable_add_folder: true
     schemas:
       default:
-        path: src/schemas/docs.md
+        path: '.cloudcannon/schemas/doc.md'
+    add_options:
+      - name: Read the docs
+        icon: local_library
+        href: https://docs.cloudcannon.com
+      - name: Add Document
+        editor: content      
+        schema: default
+    _enabled_editors:
+      - content
+      - visual
+    parse_branch_index: true
+    preview:
+      metadata: 
+        - icon: folder
+          text: 
+            - key: nav_section
+        - icon: format_list_numbered
+          text: 
+            - key: weight
+  es_docs:
+    path: es_docs
+    base_url: /es/docs
+    icon: file
+    disable_add_folder: true
+    schemas:
+      default:
+        path: '.cloudcannon/schemas/es_doc.md'
     add_options:
       - name: Read the docs
         icon: local_library

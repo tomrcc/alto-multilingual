@@ -159,9 +159,11 @@ collection_groups:
   - heading: Base Pages
     collections:
       - pages
+      - es_pages
   - heading: Docs
     collections:
       - docs
+      - es_docs
   - heading: Site Settings
     collections:
       - Meta_Data
